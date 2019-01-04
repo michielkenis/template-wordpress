@@ -33,6 +33,13 @@ web:
             expires: 600
             scripts: true
             allow: true
+            
+        "/wp-content":
+          allow: true
+          expires: 600
+          passthru: '/index.php'
+          root: 'web/wp-content'
+          scripts: false
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
@@ -49,7 +56,7 @@ mounts:
 hooks:
     build: |
         set -e
-        cp -R web/wp-content/plugins/* web/wp/wp-content/plugins/
-        cp -R web/wp-content/themes/* web/wp/wp-content/themes/
+        cp -R web/wp/wp-content/plugins/* web/wp-content/plugins/
+        cp -R web/wp/wp-content/themes/* web/wp-content/themes/
         # Uncomment this line when you start adding extra language packs.
         #cp -R web/wp-content/languages/* web/wp/wp-content/languages/
