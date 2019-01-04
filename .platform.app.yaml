@@ -59,4 +59,4 @@ hooks:
         cp -R web/wp/wp-content/plugins/* web/wp-content/plugins/
         cp -R web/wp/wp-content/themes/* web/wp-content/themes/
         # Uncomment this line when you start adding extra language packs.
-        #cp -R web/wp-content/languages/* web/wp/wp-content/languages/
+        #cp -R web/wp/wp-content/languages/* web/wp-content/languages/
